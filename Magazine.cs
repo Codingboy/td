@@ -256,22 +256,16 @@ enum NodeType
 	upperSouthEast
 }
 
-public class Node
-{
-	public Vector3 pos;
-	public NodeType type;
-	public List<Node> neighbours;
-	public List<int> neighbourIDs;
-	public int id;
-	public Node()
-	{
-		neighbours = new List<Node>();
-		neighbourIDs = new List<int>();
-		type = NodeType.none;
-	}
-}
-
 public class Greedy
 {
 	
+}
+
+public class Map
+{
+	public NodeType[,,] type;
+	public Map(int x, int y, int z)
+	{
+		type = new type[x, y, z];
+	}
 }
